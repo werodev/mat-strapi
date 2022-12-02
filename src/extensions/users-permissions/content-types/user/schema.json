@@ -64,16 +64,22 @@
       "configurable": false
     },
     "mobile": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "regex": "(0047|\\+47|47)?\\d{8} "
     },
     "address1": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "post_number": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "regex": "/^\\d{4}$/"
     },
     "post": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "type_of_user": {
       "type": "enumeration",
@@ -81,7 +87,8 @@
         "admin",
         "customer",
         "kitchen"
-      ]
+      ],
+      "required": true
     }
   }
 }

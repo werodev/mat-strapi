@@ -13,16 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "required": true
     },
     "order_date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "delivery_date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "total": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "status": {
       "type": "enumeration",
@@ -30,7 +34,8 @@
         "bestilt",
         "levert",
         "fakturert"
-      ]
+      ],
+      "required": true
     },
     "preview": {
       "type": "media",
@@ -45,6 +50,22 @@
     },
     "grade": {
       "type": "decimal"
+    },
+    "additional_information": {
+      "type": "text",
+      "required": true
+    },
+    "delivery_address": {
+      "type": "text",
+      "required": true
+    },
+    "payment_information": {
+      "type": "text",
+      "required": true
+    },
+    "products": {
+      "type": "json",
+      "required": true
     }
   }
 }

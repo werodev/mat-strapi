@@ -4,7 +4,8 @@
   "info": {
     "singularName": "invoice",
     "pluralName": "invoices",
-    "displayName": "invoice"
+    "displayName": "invoice",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,26 +13,31 @@
   "pluginOptions": {},
   "attributes": {
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "required": true
     },
     "invoice_date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "total": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "payment_due": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "preview": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
